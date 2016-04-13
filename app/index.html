@@ -1,0 +1,88 @@
+
+<html>
+  <head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>some title</title>
+    <!-- build:css css/libraries.min.css-->
+    <!-- bower:css-->
+    <!-- endbower-->
+    <!-- endbuild-->
+    <!-- build:css css/app.min.css-->
+    <link rel="stylesheet" href="css/app.css"/>
+    <!-- endbuild-->
+  </head>
+  <body>
+    <div id="main" class="m-scene">
+      <div id="animatedModal" data-reveal="data-reveal" data-close-on-click="true" data-animation-in="fade-in" data-animation-out="fade-out" class="reveal">
+        <h1>great modal</h1>
+        <p>it is text element</p>
+        <button data-close="data-close" aria-label="Close reveal" type="button" class="close-button"><span aria-hidden="true">&times;</span></button>
+      </div>
+      <div class="scene_element scene_element--fadein">
+        <div class="row align-center">
+          <div class="small-12 large-10 columns"> 
+            <h1>Welcome to Gulp Foundation</h1><img src="images/images/placeholders@2x.png" class="left"/><a href="kitchensink.html" class="button text-center">kitchensink</a>
+          </div>
+        </div>
+      </div>
+      <div class="scene_element scene_element--moveup">
+        <div class="row align-center">
+          <div class="small-12 large-10 columns"> 
+            <div class="callout">
+              <h5>A gulp foundation front-end build</h5>
+              <p>gulp to start, </p>
+              <p>gulp publish to export everything in the dist folder, </p>
+              <p>and server:dist to preview.</p>
+            </div>
+          </div>
+          <div class="small-12 large-10 columns"> 
+            <h5>javascript test tool tooltip</h5>
+            <p>test <span data-tooltip="data-tooltip" aria-haspopup="true" data-disable-hover="false" tabindex="1" title="Fancy word for a beetle." class="has-tip">tooltips here</span></p>
+          </div>
+          <div class="small-12 large-10 columns"> 
+            <h5>javascript test modal</h5>
+            <p><a data-toggle="animatedModal">click here</a></p>
+          </div>
+          <div class="small-12 large-10 columns">
+            <h5>javascript accordion</h5>
+            <ul data-accordion="data-accordion" data-allow-all-closed="true" class="accordion">
+              <li data-accordion-item="data-accordion-item" class="accordion-item is-active"><a href="#" class="accordion-title">Accordion 1</a>
+                <div data-tab-content="data-tab-content" class="accordion-content">I would start in the open state, due to using the `is-active` state class.</div>
+              </li>
+              <li data-accordion-item="data-accordion-item" class="accordion-item"><a href="#" class="accordion-title">Accordion 1</a>
+                <div data-tab-content="data-tab-content" class="accordion-content">I would start in the open state, due to using the `is-active` state class.</div>
+              </li>
+            </ul>
+          </div>
+          <div class="small-12 large-10 columns">
+            <h5>javascript equalizer</h5>
+            <div data-equalizer="data-equalizer" data-equalize-on="large" id="test-eq" class="row">
+              <div class="small-12 medium-4 columns">
+                <div data-equalizer-watch="data-equalizer-watch" class="callout">
+                  <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum laboriosam fuga, sint laborum vero neque aut blanditiis, reiciendis vitae optio eaque quas iste corrupti odio natus voluptas distinctio. Ea, quasi.</p>
+                </div>
+              </div>
+              <div class="small-12 medium-4 columns">
+                <div data-equalizer-watch="data-equalizer-watch" class="callout">
+                  <p> Lorem ipsum dolor sit amet, consectetur</p>
+                </div>
+              </div>
+              <div class="small-12 medium-4 columns">
+                <div data-equalizer-watch="data-equalizer-watch" class="callout"><img src="http://placehold.it/350x150"/></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- build:js js/vendor/libraries.min.js-->
+    <!-- endbuild-->
+    <!-- build:js js/vendor/foundation.min.js-->
+    <!-- endbuild-->
+    <!-- build:js js/app.min.js-->
+    <script src="scripts/commons.bundles.js"></script>
+    <script src="scripts/vendors.js"></script>
+    <!-- endbuild-->
+  </body>
+</html>

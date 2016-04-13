@@ -1,0 +1,38 @@
+{
+  "name": "gulp-foundation",
+  "description": "",
+  "main": "bower.json",
+  "authors": [
+    "Halei Liu <hli@kontrapunkt.com>"
+  ],
+  "license": "ISC",
+  "moduleType": [],
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "devDependencies": {
+    "foundation-sites": "6.2.0",
+    "jquery": "~2.2.1",
+    "smoothstate": "~0.7.2",
+    "motion-ui": "~1.2.2",
+    "velocity": "~1.2.3",
+    "scrollmagic": "~2.0.5",
+    "what-input": "2.0.1",
+    "scrollMonitor": "~1.0.12"
+  },
+  "dependencies": {
+    "jquery": "~2.2.1",
+    "foundation-sites": "~6.2.0",
+    "smoothstate": "~0.7.2",
+    "velocity": "~1.2.3"
+  },
+  "resolutions": {
+    "what-input": "2.0.1"
+  }
+}

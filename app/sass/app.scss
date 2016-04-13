@@ -1,0 +1,103 @@
+@charset 'utf-8';
+
+@import 'settings';
+@import '../bower_components/foundation-sites/scss/foundation';
+@import '../bower_components/motion-ui/motion-ui';
+
+$global-flexbox: true;
+
+@include foundation-global-styles;
+@include foundation-flex-grid;
+@include foundation-flex-classes;
+@include foundation-typography;
+@include foundation-button;
+@include foundation-forms;
+@include foundation-visibility-classes;
+@include foundation-float-classes;
+@include foundation-accordion;
+@include foundation-badge;
+@include foundation-breadcrumbs;
+@include foundation-button-group;
+@include foundation-callout;
+@include foundation-close-button;
+@include foundation-drilldown-menu;
+@include foundation-dropdown;
+@include foundation-dropdown-menu;
+@include foundation-flex-video;
+@include foundation-label;
+@include foundation-media-object;
+@include foundation-menu;
+@include foundation-off-canvas;
+@include foundation-orbit;
+@include foundation-pagination;
+@include foundation-progress-bar;
+@include foundation-slider;
+@include foundation-sticky;
+@include foundation-reveal;
+@include foundation-switch;
+@include foundation-table;
+@include foundation-tabs;
+@include foundation-thumbnail;
+@include foundation-title-bar;
+@include foundation-tooltip;
+@include foundation-top-bar;
+
+
+@import 'webfont';
+
+
+@include motion-ui-transitions;
+@include motion-ui-animations;
+
+
+.m-scene .scene_element {
+  animation-duration: 2s;
+  transition-timing-function: ease-in;
+  animation-fill-mode: both;
+}
+
+.m-scene .scene_element--fadein {
+  animation-name: fadeIn;
+  background-color: $light-gray;
+}
+
+.m-scene .scene_element--moveup {
+  animation-name: moveUp;
+}
+
+.m-scene.is-exiting .scene_element {
+  animation-direction: alternate-reverse;
+  transition-timing-function: ease-out;
+}
+
+/*
+ * Keyframes
+ */
+@keyframes fadeIn {
+  0% {
+    transform: translate3d(0, -200px, 0);
+    opacity: 0;
+  }
+  50% {
+    transform: translate3d(0, -100px, 0);
+    opacity: 0.5;
+  }
+  100% {
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+  }
+}
+@keyframes moveUp {
+  0% {
+    transform: translate3d(0, 200px, 0);
+    opacity: 0;
+  }
+  50% {
+    transform: translate3d(0, 150px, 0);
+    opacity: 0.5;
+  }
+  100% {
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+  }
+}

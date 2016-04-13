@@ -1,0 +1,72 @@
+[
+  {
+    "name": "Adam Andreas Garde",
+    "title": "Seniorforsker, dr.scient.",
+    "description": "Supplerende feltarbejde med skib, Jordens ældste meteoritkrater ved Maniitsoq i Vestgrønland.",
+    "amount": "90.000",
+    "img": "images/spot-47.jpg"
+  },
+  {
+    "name": "Adam Frederik Sander Pedersen",
+    "title": "Postdoc, ph.d.",
+    "description": "A genetic recombination mechanism novel to current concepts of evolution and evolvability.",
+    "amount": "531.326",
+    "img": "images/spot-41.jpg"
+  },
+  {
+    "name": "Adam Paulsen",
+    "title": "Postdoc, ph.d.",
+    "description": "Mellem vildnis og kulturlandskab. Naturbeskyttelse som idé og problem i Tyskland 1890-1990/2011.",
+    "amount": "507.027",
+    "img": "images/spot-41.jpg"
+  },
+  {
+    "name": "Agnes Arnorsdottir",
+    "title": "Lektor, dr.phil.",
+    "description": "Lov, ret og ægteskab i middelalderen og tidlig moderne tid.",
+    "amount": "50.000",
+    "img": "images/spot-41.jpg"
+  },
+  {
+    "name": "Agnete Kjeldal Wisti Lassen",
+    "title": "Videnskabelig assistent, ph.d.",
+    "description": "Forseglinger i The Yale Babylonian Collection: en kunstog socialhistorisk ",
+    "amount": "350.000",
+    "img": "images/spot-41.jpg"
+  },
+  {
+    "name": "Alejandro Martinez",
+    "title": "Ph.d.",
+    "description": "Meta-analysis on the origin of marine cave fauna: Insights on global ecological and evolutionary processes.",
+    "amount": "1.100.000",
+    "img": "images/spot-41.jpg"
+  },
+  {
+    "name": "Alexander Huck",
+    "title": "Forskningsstipendiat, ph.d.",
+    "description": "Kontrol af emission af en enkelt urenhed i en diamant.",
+    "amount": "1.096.438",
+    "img": "images/spot-41.jpg"
+  },
+  {
+    "name": "Alexander Karl Koch",
+    "title": "Forskningsstipendiat, ph.d.",
+    "description": "Afholdelse af ’9th Nordic Conference on Behavioral and Experimental Economics’",
+    "amount": "50.000",
+    "img": "images/spot-41.jpg"
+  },
+  {
+    "name": "Alexey Solodovnikov",
+    "title": "Professor, dr.rer.pol.",
+    "description": "Forskningsrejse i forbindelse med projektet Phylogeny, Historical Biogeography and Systematics of the rove beetle tribe Staphylinini (Coleoptera: Staphylinidae).",
+    "amount": "75.000",
+    "img": "images/spot-41.jpg"
+  },
+  {
+    "name": "Alice Heegaard Klynge",
+    "title": "Lektor, ph.d.",
+    "description": "The Importance of Multiple Abilities for Labor Market Outcomes.",
+    "amount": "1.205.000",
+    "img": "images/spot-41.jpg"
+  }
+]
