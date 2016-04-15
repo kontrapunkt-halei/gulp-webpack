@@ -4,7 +4,6 @@ var imageminJpegtran  = require('imagemin-jpegtran');
 var gulp              = require('gulp');
 var pngquant          = require('pngquant');
 var fs                = require('fs');
-var wiredep           = require('wiredep').stream;
 var webpack           = require('webpack-stream');
 
 var cache             = require('gulp-cache');
@@ -40,7 +39,11 @@ gulp.task('server', ['sass', /*'webpack',*/ 'jade'], function(){
     server: globals.dev
   });
 
-  gulp.watch(paths.app.sass + '/*', ['sass']);
+  gulp.watch([
+    paths.app.sass + '/*.scss',
+    paths.app.sass + '/**/*.scss',
+  ],
+  ['sass']);
   // watch jade and jade comps
   gulp.watch([
     paths.app.jade + '/*.jade',
@@ -67,12 +70,14 @@ var paths = {
     'jade':     globals.dev + '/jade',
     'fonts':    globals.dev + '/fonts',
     'images':   globals.dev + '/images',
-    'scripts':   globals.dev + '/scripts'
+    'videos':   globals.dev + '/videos',
+    'scripts':  globals.dev + '/scripts'
   },
   prod:{
     'css':      globals.prod + '/css',
     'fonts':    globals.prod + '/fonts',
-    'images':   globals.prod + '/images'
+    'images':   globals.prod + '/images',
+    'videos':   globals.prod + '/videos'
   }
 };
 
@@ -105,8 +110,8 @@ gulp.task('sass', function(){
     .pipe(sourcemaps.init())
     .pipe(sass(sassOptions))
     .pipe(autoprefixer())
-    .pipe(gulp.dest(paths.app.css))
     .pipe(sourcemaps.write())
+    .pipe(gulp.dest(paths.app.css))
     .pipe(browserSync.stream());
 });
 
@@ -176,6 +181,11 @@ gulp.task('images', function(){
 })
 
 
+gulp.task('videos', function(){
+  return gulp.src(paths.app.videos + '/**/*')
+    .pipe(gulp.dest(paths.prod.videos));
+})
+
 // copy the html file from dev to pro
 gulp.task('html-copy', function(){
   return gulp.src(globals.dev + '/*.html')
@@ -194,4 +204,4 @@ gulp.task('del', function(){
 
 gulp.task('default', ['server']);
 
-gulp.task('publish', ['del', 'fonts', 'images', 'html-copy']);
+gulp.task('publish', ['del', 'fonts', 'images', 'videos', 'html-copy']);

@@ -13,6 +13,7 @@
     "bower": "^1.7.7",
     "browser-sync": "^2.11.1",
     "del": "^2.2.0",
+    "gulp": "^3.9.1",
     "gulp-autoprefixer": "^3.1.0",
     "gulp-cache": "^0.4.3",
     "gulp-cssnano": "^2.1.1",
@@ -29,7 +30,6 @@
     "imagemin-jpegtran": "^4.3.2",
     "pngquant": "^0.6.0",
     "webpack": "^1.12.14",
-    "webpack-stream": "^3.1.0",
-    "wiredep": "^3.0.0"
+    "webpack-stream": "^3.1.0"
   }
 }
