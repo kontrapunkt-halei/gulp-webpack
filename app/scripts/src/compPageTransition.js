@@ -15,6 +15,8 @@ $(function(){
 
         // Restart your animation
         smoothState.restartCSSAnimations();
+
+
       }
     },
     onProgress:{

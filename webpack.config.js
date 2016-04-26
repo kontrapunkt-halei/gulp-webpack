@@ -8,7 +8,8 @@ module.exports = {
   entry:{
     app:[
       './app/scripts/src/pageIndex.js',
-      './app/scripts/src/pageKitchensink.js'
+      './app/scripts/src/pageKitchensink.js',
+      './app/scripts/src/compPageTransition.js'
     ],
     vendors: [
       'jquery'

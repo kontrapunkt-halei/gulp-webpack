@@ -153,12 +153,9 @@ gulp.task('wiredep', function () {
 gulp.task('webpack', function(){
   return gulp.src('app/scripts/main.js')
     .pipe(webpack(require('./webpack.config.js')))
-    .pipe(plumber({
-      errorHandler: function (error) {
-        console.log(error.message);
-        beeper('***');
-        this.emit('end');
-    }}))
+    .on('error', function handleError() {
+         this.emit('end'); // Recover from errors
+       })
     .pipe(gulp.dest('app/scripts/'));
 })
 
