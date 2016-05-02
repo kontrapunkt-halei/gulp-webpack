@@ -1,22 +1,20 @@
 var webpack     = require('webpack');
 var path        = require('path');
-var bower_dir   = __dirname + '/app/bower_components';
+var bower_dir   = __dirname + '/app/assets/bower_components';
 
 
 module.exports = {
-  context: __dirname,
   entry:{
     app:[
-      './app/scripts/src/pageIndex.js',
-      './app/scripts/src/pageKitchensink.js',
-      './app/scripts/src/compPageTransition.js'
+      './app/assets/scripts/pageIndex.js',
+      './app/assets/scripts/pageKitchensink.js'
     ],
     vendors: [
       'jquery'
     ]
   },
   output:{
-    path: path.join(__dirname, "scripts"),
+    path: path.join(__dirname, "./app/assets/javascript"),
     filename: '[name].js',
   },
   resolve: {

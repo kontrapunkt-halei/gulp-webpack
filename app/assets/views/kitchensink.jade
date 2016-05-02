@@ -1,12 +1,12 @@
 html
-  include header
+  include template-parts/header
   body
     div(id="main" class="m-scene")
       .scene_element.scene_element--fadein
         .row.align-center
           .small-12.large-10.columns 
             h1 Welcome to Gulp Foundation
-            img(src="images/images/placeholders@2x.png" class="left")
+            img(src="assets/images/images/placeholders@2x.png" class="left")
             a(class="button text-center" href="index.html") back to front
       .scene_element.scene_element--moveup
         .row
@@ -137,4 +137,4 @@ html
               p
                 | A whole kitchen sink of goodies comes with Foundation. Check out the docs to see them all, along with details on making them your own.
               a.small.button(href='http://foundation.zurb.com/sites/docs/') Go to Foundation Docs
-  include footer
+  include template-parts/footer

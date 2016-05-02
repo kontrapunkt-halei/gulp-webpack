@@ -30,6 +30,24 @@ var globals = {
   prod: 'dist'
 };
 
+// global paths
+var paths = {
+  app:{
+    'sass':     globals.dev + '/assets/scss',
+    'css':      globals.dev + '/assets/css',
+    'jade':     globals.dev + '/assets/views',
+    'fonts':    globals.dev + '/assets/fonts',
+    'images':   globals.dev + '/assets/images',
+    'videos':   globals.dev + '/assets/videos',
+    'scripts':  globals.dev + '/assets/scripts'
+  },
+  prod:{
+    'css':      globals.prod + '/assets/css',
+    'fonts':    globals.prod + '/assets/fonts',
+    'images':   globals.prod + '/assets/images',
+    'videos':   globals.prod + '/assets/videos'
+  }
+};
 
 /*------------------------
 browser sync task
@@ -62,24 +80,7 @@ gulp.task('server:dist', [], function(){
   });
 });
 
-// global paths
-var paths = {
-  app:{
-    'sass':     globals.dev + '/sass',
-    'css':      globals.dev + '/css',
-    'jade':     globals.dev + '/jade',
-    'fonts':    globals.dev + '/fonts',
-    'images':   globals.dev + '/images',
-    'videos':   globals.dev + '/videos',
-    'scripts':  globals.dev + '/scripts'
-  },
-  prod:{
-    'css':      globals.prod + '/css',
-    'fonts':    globals.prod + '/fonts',
-    'images':   globals.prod + '/images',
-    'videos':   globals.prod + '/videos'
-  }
-};
+
 
 // foundation site path need fix
 var sassPaths = [
@@ -95,7 +96,7 @@ var sassOptions = {
 };
 
 // datas
-var dataPaths = JSON.parse(fs.readFileSync('app/data' + '/data.json'));
+var dataPaths = JSON.parse(fs.readFileSync('app/assets/data' + '/data.json'));
 
 
 // sass task
@@ -119,9 +120,7 @@ gulp.task('sass', function(){
 gulp.task('jade', function(){
   return gulp.src([
     paths.app.jade + '/*.jade',
-    '!' + paths.app.jade + '/header.jade',
-    '!' + paths.app.jade + '/footer.jade',
-    paths.app.jade + '/**/*.jade'
+    '!' + paths.app.jade + '/template-parts/*.jade'
   ])
     .pipe(gulpData(function(file){
       return dataTest = dataPaths;
@@ -138,25 +137,15 @@ gulp.task('jade', function(){
     .pipe(gulp.dest(globals.dev));
 });
 
-// bower wire plugin
-gulp.task('wiredep', function () {
-  return gulp.src([
-    paths.app.jade + '/header.jade',
-    paths.app.jade + '/footer.jade'
-  ])
-    .pipe(wiredep({
-    }))
-    .pipe(gulp.dest(paths.app.jade));
-});
 
 // gulp webpack task
 gulp.task('webpack', function(){
-  return gulp.src('app/scripts/main.js')
+  return gulp.src('')
     .pipe(webpack(require('./webpack.config.js')))
     .on('error', function handleError() {
          this.emit('end'); // Recover from errors
        })
-    .pipe(gulp.dest('app/scripts/'));
+    .pipe(gulp.dest('app/assets/javascript/'));
 })
 
 // gulp graphic resources, fonts, images or videos.
@@ -187,7 +176,7 @@ gulp.task('videos', function(){
 gulp.task('html-copy', function(){
   return gulp.src(globals.dev + '/*.html')
     .pipe(useref({
-      searchPath: ['app', 'app/bower_components']
+      searchPath: ['app']
     }))
     .pipe(gulpIf('*.css', cssnano()))
     .pipe(gulpIf('*.js', gulpUglify()))
