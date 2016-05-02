@@ -1,0 +1,16 @@
+head
+  meta(charset="utf-8")
+  meta(name="viewport", content="width=device-width, initial-scale=1.0")
+  block title
+    title default title
+  // build:css assets/css/app.min.css
+  link(rel="stylesheet", href="assets/css/app.css")
+  // endbuild
+  
+  body
+    block content
+    block footer
+      // build:js assets/js/app.min.js
+      script(src="assets/javascript/commons.bundles.js")
+      script(src="assets/javascript/vendors.js")
+      // endbuild

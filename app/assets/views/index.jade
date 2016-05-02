@@ -1,53 +1,55 @@
-html
-  include template-parts/header
-  body
-    div(id="main" class="m-scene")
-      div(class="reveal" id="animatedModal" data-reveal data-close-on-click="true" data-animation-in="fade-in" data-animation-out="fade-out")
-        h1 great modal
-        p it is text element
-        button(class="close-button" data-close aria-label="Close reveal" type="button")
-          span(aria-hidden="true") &times;
-      .scene_element.scene_element--fadein
-        .row.align-center
-          .small-12.large-10.columns 
-            h1 Welcome to Gulp Foundation
-            img(src="assets/images/images/placeholders@2x.png" class="left")
-            a(class="button text-center" href="kitchensink.html") kitchensink
-      .scene_element.scene_element--moveup
-        .row.align-center
-          .small-12.large-10.columns 
-            .callout
-              h5() A gulp foundation front-end build
-              p gulp to start, 
-              p gulp publish to export everything in the dist folder, 
-              p and server:dist to preview.
-          .small-12.large-10.columns 
-            h5 javascript test tool tooltip
-            p test 
-              span(data-tooltip aria-haspopup="true" class="has-tip" data-disable-hover="false" tabindex="1" title="Fancy word for a beetle.") tooltips here
-          .small-12.large-10.columns 
-            h5 javascript test modal
-            p
-              a(data-toggle="animatedModal") click here
-          .small-12.large-10.columns
-            h5 javascript accordion
-            ul(class="accordion" data-accordion data-allow-all-closed="true")
-              li(class="accordion-item is-active" data-accordion-item)
-                a(href="#" class="accordion-title") Accordion 1
-                div(class="accordion-content" data-tab-content) I would start in the open state, due to using the `is-active` state class.
-              li(class="accordion-item" data-accordion-item)
-                a(href="#" class="accordion-title") Accordion 1
-                div(class="accordion-content" data-tab-content) I would start in the open state, due to using the `is-active` state class.
-          .small-12.large-10.columns
-            h5 javascript equalizer
-            div(class="row" data-equalizer data-equalize-on="large" id="test-eq")
-              div(class="small-12 medium-4 columns")
-                div(class="callout" data-equalizer-watch)
-                  p  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum laboriosam fuga, sint laborum vero neque aut blanditiis, reiciendis vitae optio eaque quas iste corrupti odio natus voluptas distinctio. Ea, quasi.
-              div(class="small-12 medium-4 columns")
-                div(class="callout" data-equalizer-watch)
-                  p  Lorem ipsum dolor sit amet, consectetur
-              div(class="small-12 medium-4 columns")
-                div(class="callout" data-equalizer-watch)
-                  img(src="http://placehold.it/350x150")
-    include template-parts/footer
+extend template-layouts/layout
+
+block title
+  title index page
+
+block content
+  div(id="main" class="m-scene")
+    div(class="reveal" id="animatedModal" data-reveal data-close-on-click="true" data-animation-in="fade-in" data-animation-out="fade-out")
+      h1 great modal
+      p it is text element
+      button(class="close-button" data-close aria-label="Close reveal" type="button")
+        span(aria-hidden="true") &times;
+    .scene_element.scene_element--fadein
+      .row.align-center
+        .small-12.large-10.columns 
+          h1 Welcome to Gulp Foundation
+          img(src="assets/images/images/placeholders@2x.png" class="left")
+          a(class="button text-center" href="kitchensink.html") kitchensink
+    .scene_element.scene_element--moveup
+      .row.align-center
+        .small-12.large-10.columns 
+          .callout
+            h5() A gulp foundation front-end build
+            p gulp to start, 
+            p gulp publish to export everything in the dist folder, 
+            p and server:dist to preview.
+        .small-12.large-10.columns 
+          h5 javascript test tool tooltip
+          p test 
+            span(data-tooltip aria-haspopup="true" class="has-tip" data-disable-hover="false" tabindex="1" title="Fancy word for a beetle.") tooltips here
+        .small-12.large-10.columns 
+          h5 javascript test modal
+          p
+            a(data-toggle="animatedModal") click here
+        .small-12.large-10.columns
+          h5 javascript accordion
+          ul(class="accordion" data-accordion data-allow-all-closed="true")
+            li(class="accordion-item is-active" data-accordion-item)
+              a(href="#" class="accordion-title") Accordion 1
+              div(class="accordion-content" data-tab-content) I would start in the open state, due to using the `is-active` state class.
+            li(class="accordion-item" data-accordion-item)
+              a(href="#" class="accordion-title") Accordion 1
+              div(class="accordion-content" data-tab-content) I would start in the open state, due to using the `is-active` state class.
+        .small-12.large-10.columns
+          h5 javascript equalizer
+          div(class="row" data-equalizer data-equalize-on="large" id="test-eq")
+            div(class="small-12 medium-4 columns")
+              div(class="callout" data-equalizer-watch)
+                p  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum laboriosam fuga, sint laborum vero neque aut blanditiis, reiciendis vitae optio eaque quas iste corrupti odio natus voluptas distinctio. Ea, quasi.
+            div(class="small-12 medium-4 columns")
+              div(class="callout" data-equalizer-watch)
+                p  Lorem ipsum dolor sit amet, consectetur
+            div(class="small-12 medium-4 columns")
+              div(class="callout" data-equalizer-watch)
+                img(src="http://placehold.it/350x150")

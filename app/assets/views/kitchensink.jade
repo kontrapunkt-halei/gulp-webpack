@@ -1,5 +1,9 @@
-html
-  include template-parts/header
+extend template-layouts/layout
+
+block title
+  title index page
+
+block content
   body
     div(id="main" class="m-scene")
       .scene_element.scene_element--fadein
@@ -137,4 +141,3 @@ html
               p
                 | A whole kitchen sink of goodies comes with Foundation. Check out the docs to see them all, along with details on making them your own.
               a.small.button(href='http://foundation.zurb.com/sites/docs/') Go to Foundation Docs
-  include template-parts/footer
